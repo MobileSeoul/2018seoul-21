@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/switch_button_left_pressed_background" />
+    <item android:top="-1024dp" android:bottom="-1024dp" android:left="-1024dp" >
+        <shape>
+            <solid android:color="@android:color/transparent" />
+            <stroke android:width="0.1dp" android:color="@android:color/white" />
+        </shape>
+    </item>
+</layer-list>

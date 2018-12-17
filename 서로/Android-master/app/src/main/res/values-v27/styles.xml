@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="Theme.AppCompat">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/color_primary</item>
+        <item name="colorPrimaryDark">@color/color_primaryDark</item>
+        <item name="colorAccent">@color/color_accent</item>
+        <item name="android:windowLightNavigationBar">true</item>
+        <item name="android:navigationBarColor">@android:color/white</item>
+
+        <item name="elevation">0dp</item>
+
+        <item name="android:elevation">0dp</item>
+    </style>
+    <style name="AppTheme.Light" parent="Theme.AppCompat.Light">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/color_primary</item>
+        <item name="colorPrimaryDark">@color/color_primaryDark</item>
+        <item name="colorAccent">@color/color_accent</item>
+        <item name="android:windowLightNavigationBar">true</item>
+        <item name="android:navigationBarColor">@color/color_userBackground</item>
+
+        <item name="elevation">0dp</item>
+
+        <item name="android:elevation">0dp</item>
+    </style>
+    <style name="AppTheme.Light.Alt" parent="AppTheme.Light">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+
+        <item name="colorPrimary">@color/color_userBackground</item>
+        <item name="colorPrimaryDark">@color/color_userBackground</item>
+        <item name="colorAccent">@color/color_accent</item>
+
+        <item name="titleTextColor">@color/color_accent</item>
+        <item name="subtitleTextColor">@color/color_accent</item>
+
+        <item name="colorControlNormal">@color/color_accent</item>
+
+        <item name="elevation">0dp</item>
+
+        <item name="android:elevation">0dp</item>
+        <item name="android:navigationBarColor">@color/color_userBackground</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+    <style name="AppTheme.Splash" parent="AppTheme.NoActionBar">
+        <item name="android:statusBarColor">@android:color/white</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+</resources>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/WelcomeActivity_ConstraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_animation"
+    tools:context=".WelcomeActivity">
+
+    <ScrollView
+        android:id="@+id/SignUpActivity_ScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:theme="@style/AppTheme.Light"
+                android:id="@+id/email_login_form"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_small_margin"
+                android:layout_marginBottom="@dimen/activity_vertical_small_margin"
+                android:layout_marginLeft="@dimen/activity_horizontal_large_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_large_margin"
+                android:paddingTop="@dimen/activity_vertical_large_margin"
+                android:paddingBottom="@dimen/activity_vertical_large_margin"
+                android:paddingStart="@dimen/activity_horizontal_large_margin"
+                android:paddingEnd="@dimen/activity_horizontal_large_margin"
+                android:background="@drawable/radius_background_large"
+                android:orientation="vertical"
+                android:elevation="@dimen/elevation">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/activity_vertical_margin"
+                    android:text="@string/message_sign_up_finish"
+                    android:textColor="@color/color_accent"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/message_enjoy"
+                    android:textColor="@color/color_gradientEnd"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_small_margin"
+                android:layout_marginBottom="@dimen/activity_vertical_small_margin"
+                android:layout_marginLeft="@dimen/activity_horizontal_large_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_large_margin"
+                android:layout_gravity="end"
+                android:text="@string/message_sign_in_automatically"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

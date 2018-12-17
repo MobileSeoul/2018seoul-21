@@ -1,0 +1,89 @@
+<resources>
+    <string name="app_name">Seoro</string>
+    <string name="title_activity_login">Sign in</string>
+
+    <string name="dialog_ok">OK</string>
+    <string name="dialog_cancel">Cancel</string>
+
+    <string name="dialog_title_error">Error</string>
+    <string name="dialog_title_permission">Permission</string>
+    <string name="dialog_message_permission">This permissions are required to run this app.</string>
+    <string name="dialog_message_location_permission">Location permission is required.</string>
+    <string name="dialog_message_camera_permission">Camera permission is required.</string>
+    <string name="dialog_message_camera_access">Can\'t access camera. Please check permission.</string>
+    <string name="dialog_message_camera_service">Can\'t get camera service.</string>
+    <string name="dialog_message_location_service">Can\'t get location service.</string>
+    <string name="dialog_message_account_service">Can\'t get account service.</string>
+    <string name="dialog_message_network_error">Network error has occurred.</string>
+    <string name="dialog_message_server_error">Server error has occurred.</string>
+    <string name="dialog_message_conflict_email">Conflict email.</string>
+    <string name="dialog_message_sign_in_failed">Sign in failed.</string>
+
+    <!-- Strings related to login -->
+    <string name="sign_up">Sign up</string>
+    <string name="login">Login</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="prompt_current_password">Current Password</string>
+    <string name="prompt_new_password">New Password</string>
+    <string name="prompt_confirm_password">Confirm Password</string>
+    <string name="prompt_username">Username</string>
+    <string name="action_sign_in" translatable="false">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale" translatable="false">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_splash">SplashActivity</string>
+    <string name="title_activity_ar_camera">ARCameraActivity</string>
+    <string name="title_activity_user">UserActivity</string>
+
+    <string name="login_form_title">Seoul Soul.</string>
+    <string name="splash_title">Seoul Soul.</string>
+    <string name="sign_up_title" translatable="false">Sign Up</string>
+
+    <string name="placeholder_item" translatable="false">Item</string>
+    <string name="placeholder_name" translatable="false">Name</string>
+    <string name="placeholder_filter" translatable="false">Filter</string>
+    <string name="placeholder_number" translatable="false">0</string>
+    <string name="placeholder_timestamp" translatable="false">January 1, 2018</string>
+
+    <string name="auto_save">Auto Save</string>
+    <string name="mirror_mode">Mirror Mode</string>
+    <string name="auto_login">Auto Login</string>
+    <string name="forget_email" translatable="false">forget email</string>
+    <string name="forgot_password" translatable="false">forgot password</string>
+
+    <string name="button_my_page">my\npage</string>
+    <string name="button_filter" translatable="false">filter</string>
+    <string name="button_follow" translatable="false">follow</string>
+
+    <string name="text_view_edit" translatable="false">edit</string>
+    <string name="text_view_followers" translatable="false">follower</string>
+    <string name="text_view_following" translatable="false">following</string>
+    <string name="text_view_collected" translatable="false">collected</string>
+    <string name="text_view_change_profile_image">Change Profile Image</string>
+    <string name="text_view_change_display_name">Change Display Name</string>
+    <string name="text_view_change_password">Change Password</string>
+    <string name="text_view_delete_account">Delete Account</string>
+
+    <string name="message_sign_up_finish">Sign up finished successfully.</string>
+    <string name="message_enjoy" translatable="false">Enjoy your\nSeoul Life!</string>
+    <string name="message_sign_in_automatically" translatable="false">Sign in automatically.</string>
+
+    <string name="header_edit_profile">Edit Profile</string>
+    <string name="header_account_security">Account &amp; Security</string>
+
+    <string name="menu_settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="mapbox_style_light" translatable="false">mapbox://styles/mapbox/light-v9</string>
+    <string name="mapbox_access_token" translatable="false">pk.eyJ1IjoiamVqdWNpdGl6ZW4iLCJhIjoiY2psZDJpNWR5MDZkeTNwcXVsaHp1NDNvZiJ9.lTvhcibo9pdHaHl9iS_4EA</string>
+    <string name="open_source_license">Open Source License</string>
+</resources>

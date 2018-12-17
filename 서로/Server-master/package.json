@@ -1,0 +1,52 @@
+{
+  "name": "seoulappcontest",
+  "version": "1.0.0",
+  "description": "server-side",
+  "main": "index.js",
+  "scripts": {
+    "debug": "set NODE_ENV=development&&set DEBUG=app:*&&nodemon src",
+    "dev": "set NODE_ENV=development&&nodemon src",
+    "start": "set NODE_ENV=production&&node src",
+    "lint": "eslint src",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": "10.3.0"
+  },
+  "author": "Junghoon Park",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.315.0",
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
+    "check-types": "^7.4.0",
+    "compression": "^1.7.3",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.3",
+    "debug": "^3.1.0",
+    "dotenv": "^6.0.0",
+    "eslint": "^4.19.1",
+    "express": "^4.16.3",
+    "express-jwt": "^5.3.1",
+    "express-session": "^1.15.6",
+    "helmet": "^3.12.1",
+    "jsonwebtoken": "^8.3.0",
+    "mongodb": "^3.0.10",
+    "mongoose": "^5.1.5",
+    "mongoose-express-session": "0.0.5",
+    "morgan": "^1.9.0",
+    "multer": "^1.3.1",
+    "multer-s3": "^2.7.0",
+    "multer-s3-transform": "^2.3.2",
+    "passport": "^0.4.0",
+    "passport-facebook": "^2.1.1",
+    "passport-local": "^1.0.0",
+    "passport-local-mongoose": "^5.0.1",
+    "path": "^0.12.7",
+    "pbkdf2-password": "^1.2.1",
+    "sharp": "^0.20.8",
+    "underscore": "^1.9.1",
+    "winston": "^3.1.0",
+    "winston-mongodb": "^3.0.2"
+  }
+}

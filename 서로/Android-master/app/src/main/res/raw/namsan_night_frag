@@ -1,0 +1,40 @@
+varying highp vec2 textureCoordinate;
+
+uniform sampler2D imageTexture;
+
+const mediump vec4 whiteColor = vec4(1.0);
+const mediump vec4 colorBurnBlendColor = vec4(45.0 / 255.0, 72.0 / 255.0, 45.0 / 255.0, 0.20);
+const mediump vec4 overlayBlendColor = vec4(72.0 / 255.0, 45.0 / 255.0, 67.0 / 255.0, 0.70);
+
+mediump vec4 alphaBlend(mediump vec4 textureColor, mediump vec4 blendColor) {
+	return vec4(mix(textureColor.rgb, blendColor.rgb, blendColor.a), textureColor.a);
+}
+
+void main()
+{
+    mediump vec4 textureColor = texture2D(imageTexture, textureCoordinate);
+    mediump vec4 colorBurnColor = whiteColor - (whiteColor - textureColor) / alphaBlend(textureColor, colorBurnBlendColor);
+    mediump float ra;
+
+    if (2.0 * colorBurnColor.r < colorBurnColor.a) {
+        ra = 2.0 * overlayBlendColor.r * colorBurnColor.r + overlayBlendColor.r * (1.0 - colorBurnColor.a) + colorBurnColor.r * (1.0 - overlayBlendColor.a);
+    } else {
+        ra = overlayBlendColor.a * colorBurnColor.a - 2.0 * (colorBurnColor.a - colorBurnColor.r) * (overlayBlendColor.a - overlayBlendColor.r) + overlayBlendColor.r * (1.0 - colorBurnColor.a) + colorBurnColor.r * (1.0 - overlayBlendColor.a);
+    }
+
+    mediump float ga;
+    if (2.0 * colorBurnColor.g < colorBurnColor.a) {
+        ga = 2.0 * overlayBlendColor.g * colorBurnColor.g + overlayBlendColor.g * (1.0 - colorBurnColor.a) + colorBurnColor.g * (1.0 - overlayBlendColor.a);
+    } else {
+        ga = overlayBlendColor.a * colorBurnColor.a - 2.0 * (colorBurnColor.a - colorBurnColor.g) * (overlayBlendColor.a - overlayBlendColor.g) + overlayBlendColor.g * (1.0 - colorBurnColor.a) + colorBurnColor.g * (1.0 - overlayBlendColor.a);
+    }
+
+    mediump float ba;
+    if (2.0 * colorBurnColor.b < colorBurnColor.a) {
+        ba = 2.0 * overlayBlendColor.b * colorBurnColor.b + overlayBlendColor.b * (1.0 - colorBurnColor.a) + colorBurnColor.b * (1.0 - overlayBlendColor.a);
+    } else {
+        ba = overlayBlendColor.a * colorBurnColor.a - 2.0 * (colorBurnColor.a - colorBurnColor.b) * (overlayBlendColor.a - overlayBlendColor.b) + overlayBlendColor.b * (1.0 - colorBurnColor.a) + colorBurnColor.b * (1.0 - overlayBlendColor.a);
+    }
+
+    gl_FragColor = vec4(ra, ga, ba, 1.0);
+}

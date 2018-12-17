@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Seoro</string>
+    <string name="title_activity_login">로그인</string>
+    <string name="dialog_ok">확인</string>
+    <string name="dialog_cancel">취소</string>
+    <string name="dialog_title_error">오류</string>
+    <string name="dialog_title_permission">권한</string>
+    <string name="dialog_message_permission">이 권한은 실행에 필수적인 권한입니다.</string>
+    <string name="dialog_message_location_permission">위치 권한이 필요합니다.</string>
+    <string name="dialog_message_camera_permission">카메라 권한이 필요합니다.</string>
+    <string name="dialog_message_camera_access">카메라에 접근 할 수 없습니다.</string>
+    <string name="dialog_message_camera_service">카메라 서비스를 가져올 수 없습니다.</string>
+    <string name="dialog_message_location_service">위치 서비스를 가져올 수 없습니다.</string>
+    <string name="dialog_message_account_service">계정 서비스를 가져올 수 없습니다.</string>
+    <string name="dialog_message_network_error">네트워크 오류가 발생했습니다.</string>
+    <string name="dialog_message_server_error">서버 오류가 발생하였습니다.</string>
+    <string name="dialog_message_conflict_email">이메일이 중복됩니다.</string>
+    <string name="dialog_message_sign_in_failed">로그인 실패</string>
+    <string name="sign_up">회원가입</string>
+    <string name="login">로그인</string>
+    <string name="prompt_email">이메일</string>
+    <string name="prompt_password">비밀번호</string>
+    <string name="prompt_current_password">현재 비밀번호</string>
+    <string name="prompt_new_password">새로운 비밀번호</string>
+    <string name="prompt_confirm_password">비밀번호 확인</string>
+    <string name="prompt_username">사용자 이름</string>
+    <string name="action_sign_in_short">로그인</string>
+    <string name="error_invalid_email">잘못된 이메일 주소입니다.</string>
+    <string name="error_invalid_password">잘못된 비밀번호입니다.</string>
+    <string name="error_incorrect_password">비밀번호가 맞지 않습니다.</string>
+    <string name="error_field_required">이 입력 칸은 필수입니다.</string>
+    <string name="auto_save">자동 저장</string>
+    <string name="mirror_mode">거울 모드</string>
+    <string name="auto_login">자동 로그인</string>
+    <string name="text_view_change_profile_image">프로필 사진 변경</string>
+    <string name="text_view_change_display_name">사용자 이름 변경</string>
+    <string name="text_view_change_password">비밀번호 변경</string>
+    <string name="text_view_delete_account">회원 탈퇴</string>
+    <string name="message_sign_up_finish">가입이 완료되었습니다.</string>
+    <string name="header_edit_profile">프로필 수정</string>
+    <string name="header_account_security">계정과 보안</string>
+    <string name="menu_settings">설정</string>
+    <string name="open_source_license">오픈소스 라이센스</string>
+</resources>

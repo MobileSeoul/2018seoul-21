@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ImageMemoActivity">
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/ImageMemoActivity_SwipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:id="@+id/ImageMemoActivity_DeleteButton"
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+                <TextView
+                    android:id="@+id/ImageMemoActivity_DisplayNameTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:textColor="@color/color_accent"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    app:layout_constraintTop_toTopOf="@+id/ImageMemoActivity_ImageView"
+                    app:layout_constraintStart_toStartOf="@+id/ImageMemoActivity_ImageView"/>
+
+                <TextView
+                    android:id="@+id/ImageMemoActivity_TimestampTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:textColor="@color/color_accent"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    app:layout_constraintTop_toBottomOf="@id/ImageMemoActivity_DisplayNameTextView"
+                    app:layout_constraintStart_toStartOf="@id/ImageMemoActivity_ImageView"/>
+
+                <ImageView
+                    android:id="@+id/ImageMemoActivity_ImageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginBottom="@dimen/activity_vertical_margin"
+                    android:scaleType="center"
+                    app:layout_constraintTop_toBottomOf="@+id/ImageMemoActivity_DeleteButton"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintDimensionRatio="W, 1:1" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/ImageMemoActivity_ImageView"
+                    android:orientation="vertical">
+
+                    <android.support.constraint.ConstraintLayout
+                        android:id="@+id/ImageMemoActivity_ConstraintLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="@dimen/activity_vertical_margin"
+                        android:paddingBottom="@dimen/activity_vertical_margin"
+                        android:paddingStart="@dimen/activity_horizontal_margin"
+                        android:paddingEnd="@dimen/activity_horizontal_margin"
+                        app:layout_constraintTop_toBottomOf="@id/ImageMemoActivity_ImageView"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent">
+
+                        <Button
+                            style="@style/Widget.AppCompat.Button.Borderless"
+                            android:id="@+id/ImageMemoActivity_EmojiButton"
+                            android:minWidth="0dp"
+                            android:minHeight="0dp"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            app:layout_constraintStart_toStartOf="parent"/>
+
+                        <TextView
+                            android:id="@+id/ImageMemoActivity_EmojiTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textColor="@color/color_accent"
+                            app:layout_constraintTop_toBottomOf="@id/ImageMemoActivity_EmojiButton"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="@id/ImageMemoActivity_EmojiButton"
+                            app:layout_constraintEnd_toEndOf="@id/ImageMemoActivity_EmojiButton"/>
+
+                        <TextView
+                            android:id="@+id/ImageMemoActivity_TextView"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/activity_horizontal_margin"
+                            android:textColor="@color/color_accent"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/ImageMemoActivity_EmojiButton"
+                            app:layout_constraintEnd_toEndOf="parent"/>
+
+                    </android.support.constraint.ConstraintLayout>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/ImageMemoActivity_RecyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+            </android.support.constraint.ConstraintLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,11 @@
+attribute vec4 position;
+attribute vec4 coordinate;
+
+uniform mat4 cameraTransform;
+
+varying highp vec2 textureCoordinate;
+
+void main() {
+    gl_Position = position;
+    textureCoordinate = (cameraTransform * coordinate).xy;
+}

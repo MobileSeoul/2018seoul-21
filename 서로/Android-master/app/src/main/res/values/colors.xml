@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="color_primary">#ffffff</color>
+    <color name="color_primaryDark">#d87786</color>
+    <color name="color_accent">#d87786</color>
+    <color name="color_sub">#fff0b4</color>
+
+    <color name="color_gradientStart">#fff0b4</color>
+    <color name="color_gradientEnd">#f64a70</color>
+    
+    <color name="color_background">#ffffff</color>
+    <color name="color_userBackground">#e2d7db</color>
+
+    <color name="color_shadow">#000000</color>
+
+    <color name="color_progressCenter">#fba695</color>
+    <color name="color_progressEnd">#f97d85</color>
+
+    <color name="color_thumbStart">#f2d7d7</color>
+    <color name="color_thumbCenter">#f2d7d7</color>
+    <color name="color_thumbEnd">#e2747f</color>
+    <color name="color_thumbStroke">#faa394</color>
+
+    <color name="color_buttonEnd">#f8617a</color>
+
+    <color name="color_switchButtonLeftStart">#f3c0b0</color>
+    <color name="color_switchButtonLeftEnd">#eb9ea0</color>
+    <color name="color_switchButtonRightStart">#ec9da0</color>
+    <color name="color_switchButtonRightEnd">#df687c</color>
+
+    <color name="color_switchButtonRipple">#80ffffff</color>
+</resources>

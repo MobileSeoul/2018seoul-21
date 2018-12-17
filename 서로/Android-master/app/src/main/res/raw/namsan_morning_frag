@@ -1,0 +1,12 @@
+varying highp vec2 textureCoordinate;
+
+uniform sampler2D imageTexture;
+
+const lowp vec4 softLightBlendColor = vec4(199.0 / 255.0, 230.0 / 255.0, 1.0, 0.84);
+
+void main()
+{
+    lowp vec4 base = texture2D(imageTexture, textureCoordinate);
+    lowp float alphaDivisor = base.a + step(base.a, 0.0);
+    gl_FragColor = base * (softLightBlendColor.a * (base / alphaDivisor) + (2.0 * softLightBlendColor * (1.0 - (base / alphaDivisor)))) + softLightBlendColor * (1.0 - base.a) + base * (1.0 - softLightBlendColor.a);
+}

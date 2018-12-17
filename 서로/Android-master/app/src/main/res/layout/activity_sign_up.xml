@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_animation"
+    tools:context=".SignUpActivity">
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleLarge"
+        android:id="@+id/SignUpActivity_ProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:visibility="gone" />
+
+    <ScrollView
+        android:id="@+id/SignUpActivity_ScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_small_margin"
+                android:layout_marginBottom="@dimen/activity_vertical_small_margin"
+                android:layout_marginLeft="@dimen/activity_horizontal_large_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_large_margin"
+                android:text="@string/sign_up_title"
+                android:textSize="12pt"
+                android:textStyle="bold"
+                android:textColor="@android:color/white" />
+
+            <LinearLayout
+                android:theme="@style/AppTheme.Light"
+                android:id="@+id/email_login_form"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_small_margin"
+                android:layout_marginBottom="@dimen/activity_vertical_small_margin"
+                android:layout_marginLeft="@dimen/activity_horizontal_large_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_large_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:background="@drawable/radius_background_large"
+                android:orientation="vertical"
+                android:elevation="@dimen/elevation">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:paddingRight="@dimen/activity_horizontal_margin"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <AutoCompleteTextView
+                                android:id="@+id/SignUpActivity_EmailAutoCompleteTextView"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/prompt_email"
+                                android:inputType="textEmailAddress"
+                                android:maxLines="1"
+                                android:singleLine="true" />
+
+                        </android.support.design.widget.TextInputLayout>
+
+                        <CheckBox
+                            android:id="@+id/SignUpActivity_EmailCheckBox"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/activity_horizontal_margin"
+                            android:button="@null"
+                            android:background="@drawable/validation_check_box"
+                            android:clickable="false"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <EditText
+                                android:id="@+id/SignUpActivity_PasswordEditText"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:imeActionId="6"
+                                android:imeOptions="actionUnspecified"
+                                android:hint="@string/prompt_password"
+                                android:inputType="textPassword"
+                                android:maxLines="1"
+                                android:singleLine="true" />
+
+                        </android.support.design.widget.TextInputLayout>
+
+                        <CheckBox
+                            android:id="@+id/SignUpActivity_PasswordCheckBox"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/activity_horizontal_margin"
+                            android:button="@null"
+                            android:background="@drawable/validation_check_box"
+                            android:clickable="false"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <EditText
+                                android:id="@+id/SignUpActivity_ConfirmPasswordEditText"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:imeActionId="6"
+                                android:imeOptions="actionUnspecified"
+                                android:hint="@string/prompt_confirm_password"
+                                android:inputType="textPassword"
+                                android:maxLines="1"
+                                android:singleLine="true" />
+
+                        </android.support.design.widget.TextInputLayout>
+
+                        <CheckBox
+                            android:id="@+id/SignUpActivity_ConfirmPasswordCheckBox"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/activity_horizontal_margin"
+                            android:button="@null"
+                            android:background="@drawable/validation_check_box"
+                            android:clickable="false"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <EditText
+                                android:id="@+id/SignUpActivity_DisplayNameEditText"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/prompt_username"
+                                android:inputType="textEmailAddress"
+                                android:maxLines="1"
+                                android:singleLine="true" />
+
+                        </android.support.design.widget.TextInputLayout>
+
+                        <CheckBox
+                            android:id="@+id/SignUpActivity_DisplayNameCheckBox"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/activity_horizontal_margin"
+                            android:button="@null"
+                            android:background="@drawable/validation_check_box"
+                            android:clickable="false"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin">
+
+                    <Button
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:id="@+id/SignUpActivity_BackButton"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_marginStart="@dimen/activity_horizontal_margin"
+                        android:background="?attr/homeAsUpIndicator"
+                        app:layout_constraintStart_toStartOf="parent"/>
+
+                    <SeekBar
+                        style="@style/AppTheme.SeekBar"
+                        android:id="@+id/MapsActivity_SeekBar"
+                        android:layout_width="128dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                </android.support.constraint.ConstraintLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CameraFilterFragment">
+
+    <TextureView
+        android:id="@+id/CameraFilterFragment_TextureView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:id="@+id/CameraFilterFragment_TopLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:gravity="end"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <Button
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:id="@+id/CameraFilterFragment_HoverButton"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:background="@drawable/ic_camera_hover"
+            android:backgroundTint="@color/color_accent"/>
+
+        <Button
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:id="@+id/CameraFilterFragment_RatioButton"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:background="@drawable/ic_camera_ratio"
+            android:backgroundTint="@color/color_accent"/>
+
+        <Button
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:id="@+id/CameraFilterFragment_ChangeCameraButton"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:background="@drawable/ic_change_camera"
+            android:backgroundTint="@color/color_accent"/>
+
+    </LinearLayout>
+    
+    <LinearLayout
+        android:id="@+id/CameraFilterFragment_HoverLinearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_vertical_small_margin"
+        android:layout_marginEnd="@dimen/activity_horizontal_large_margin"
+        android:paddingTop="@dimen/activity_vertical_small_margin"
+        android:paddingBottom="@dimen/activity_vertical_small_margin"
+        android:paddingStart="@dimen/activity_horizontal_small_margin"
+        android:paddingEnd="@dimen/activity_horizontal_small_margin"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:background="@drawable/radius_background"
+        app:layout_constraintTop_toBottomOf="@+id/CameraFilterFragment_TopLinearLayout"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="@dimen/activity_horizontal_large_margin"
+                android:layout_marginEnd="@dimen/activity_horizontal_large_margin"
+                android:background="@drawable/ic_camera_flash"
+                android:backgroundTint="@color/color_accent"/>
+
+            <Button
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginEnd="@dimen/activity_horizontal_large_margin"
+                android:background="@drawable/ic_camera_timer"
+                android:backgroundTint="@color/color_accent"/>
+
+            <Button
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginEnd="@dimen/activity_horizontal_large_margin"
+                android:background="@drawable/ic_camera_grid"
+                android:backgroundTint="@color/color_accent"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <Switch
+                android:id="@+id/CameraFilterFragment_AutoSaveSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/activity_horizontal_small_margin"
+                android:text="@string/auto_save"
+                android:textColor="@color/color_accent"/>
+
+            <Switch
+                android:id="@+id/CameraFilterFragment_MirrorModeSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/mirror_mode"
+                android:textColor="@color/color_accent"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/CameraFilterFragment_TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:visibility="invisible"
+        android:alpha="0"
+        android:textColor="@android:color/white"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintTop_toBottomOf="@+id/CameraFilterFragment_TopLinearLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/CameraFilterFragment_BottomConstraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageView
+            android:id="@+id/CameraFilterFragment_ImageView"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:background="@drawable/image_view_stroke_background"
+            android:scaleType="center"
+            android:elevation="@dimen/elevation"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <Button
+            android:id="@+id/CameraFilterFragment_CaptureButton"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:background="@drawable/camera_button"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:elevation="@dimen/elevation"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>

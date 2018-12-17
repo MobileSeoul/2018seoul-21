@@ -1,0 +1,16 @@
+varying highp vec2 textureCoordinate;
+
+uniform sampler2D imageTexture;
+
+const mediump vec4 linearBurnBlendColor = vec4(1.0, 198.0 / 255.0, 0.0, 0.30);
+
+mediump vec4 alphaBlend(mediump vec4 textureColor, mediump vec4 blendColor) {
+    return vec4(mix(textureColor.rgb, blendColor.rgb, blendColor.a), textureColor.a);
+}
+
+void main()
+{
+    mediump vec4 textureColor = texture2D(imageTexture, textureCoordinate);
+    mediump vec4 alphaBlendColor = alphaBlend(textureColor, linearBurnBlendColor);
+    gl_FragColor = vec4(clamp(textureColor.rgb + alphaBlendColor.rgb - vec3(1.0), vec3(0.0), vec3(1.0)), textureColor.a);
+}

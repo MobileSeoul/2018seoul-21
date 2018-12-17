@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ImageMemoFragment">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/ImageMemoFragment_BackgroundConstraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="64dp"
+        android:layout_marginBottom="64dp"
+        android:layout_marginLeft="64dp"
+        android:layout_marginRight="64dp">
+
+        <TextView
+            android:id="@+id/ImageMemoFragment_FilterTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:text="@string/placeholder_filter"
+            android:textColor="@color/color_primaryDark"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/ImageMemoFragment_CoverConstraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="64dp"
+        android:layout_marginBottom="64dp"
+        android:layout_marginLeft="64dp"
+        android:layout_marginRight="64dp">
+
+        <ImageView
+            android:id="@+id/ImageMemoFragment_ImageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="TODO" />
+
+        <TextView
+            android:id="@+id/ImageMemoFragment_UsernameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_small_margin"
+            android:layout_marginStart="@dimen/activity_horizontal_small_margin"
+            android:text="@string/placeholder_name"
+            android:textColor="@color/color_primaryDark"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/ImageMemoFragment_TimestampTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/activity_horizontal_small_margin"
+            android:text="@string/placeholder_timestamp"
+            android:textColor="@color/color_primaryDark"
+            app:layout_constraintTop_toBottomOf="@+id/ImageMemoFragment_UsernameTextView"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>

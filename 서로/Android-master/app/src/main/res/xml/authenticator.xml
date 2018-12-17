@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<account-authenticator xmlns:android="http://schemas.android.com/apk/res/android"
+    android:accountType="org.seoro.seoro"
+    android:icon="@drawable/ic_icon"
+    android:smallIcon="@drawable/ic_icon"
+    android:label="@string/app_name"
+    android:accountPreferences="@xml/account_preferences"/>
